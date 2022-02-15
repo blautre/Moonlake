@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    public CharacterClass characterClass;
+    public string displayName;
+    public Color characterColor;
+
     public float health { get; set; }
     public float stamina { get; set; }
     public float mana { get; set; }

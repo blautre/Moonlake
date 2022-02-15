@@ -41,6 +41,7 @@ public class PlayerControl : NetworkBehaviour
         float speed = playerData.speed;
         if (isLocalPlayer)
         {
+            
             moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")); // Take vertical and horizontal user input and store it in the vector
 
             playerBody.velocity = moveSpeed * speed * Time.deltaTime * moveDirection.normalized; // constant velocity is input * character's speed stat * movement speed
@@ -51,7 +52,7 @@ public class PlayerControl : NetworkBehaviour
         playerLastPosition = playerTransform.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    [Server] private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
