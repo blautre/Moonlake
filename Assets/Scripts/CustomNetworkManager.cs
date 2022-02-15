@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CustomNetworkManager : NetworkManager
 {
+    /*
     public struct CreateCharacterMessage : NetworkMessage
     {
         public CharacterClass characterClass;
@@ -44,7 +45,7 @@ public class CustomNetworkManager : NetworkManager
 
     void OnCreateCharacter(NetworkConnection conn, CreateCharacterMessage message)
     {
-        GameObject gameObject = Instantiate(playerPrefab);
-        PlayerData playerdata = GetComponent<PlayerData>();
-    }
+        //GameObject gameObject = Instantiate(playerPrefab);
+        //PlayerData playerdata = GetComponent<PlayerData>();
+    }*/
 }

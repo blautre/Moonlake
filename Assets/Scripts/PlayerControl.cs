@@ -46,8 +46,6 @@ public class PlayerControl : NetworkBehaviour
             playerBody.velocity = moveSpeed * speed * Time.deltaTime * moveDirection.normalized; // constant velocity is input * character's speed stat * movement speed
         }
 
-
-
         desiredSpeed = playerBody.velocity.magnitude;
         actualSpeed = Vector3.Distance(playerTransform.position, playerLastPosition) / Time.deltaTime;
         playerLastPosition = playerTransform.position;
